@@ -11,7 +11,8 @@ const en = {
     impact: "Impact",
     team: "Team",
     contact: "Contact",
-    launch: "Launch Studio"
+    launch: "Launch Studio",
+    feedback: "Feedback"
   },
   hero: {
     title: "Preserving History with",
@@ -90,6 +91,14 @@ const en = {
     downloadBtn: "Close",
     secureBadge: "Secure Registration"
   },
+  feedback: {
+    title: "We Value Your Feedback",
+    subtitle: "Help us improve the CulturaX experience for everyone.",
+    placeholder: "Share your thoughts, suggestions, or report issues here...",
+    submit: "Send Feedback",
+    success: "Thank you! Your feedback helps us grow.",
+    ratingLabel: "Rate your experience:"
+  },
   // Comic Creator & Existing Translations
   sceneLabel: "What is happening in the scene?",
   placeholder: "e.g., A boy throwing a plastic bottle in a historic garden...",
@@ -167,7 +176,8 @@ const hi = {
     impact: "प्रभाव",
     team: "टीम",
     contact: "संपर्क",
-    launch: "स्टूडियो शुरू करें"
+    launch: "स्टूडियो शुरू करें",
+    feedback: "प्रतिक्रिया"
   },
   hero: {
     title: "इतिहास का संरक्षण",
@@ -246,6 +256,14 @@ const hi = {
     downloadBtn: "बंद करें",
     secureBadge: "सुरक्षित पंजीकरण"
   },
+  feedback: {
+    title: "आपकी प्रतिक्रिया महत्वपूर्ण है",
+    subtitle: "CulturaX अनुभव को बेहतर बनाने में हमारी सहायता करें।",
+    placeholder: "अपने विचार, सुझाव साझा करें या समस्याओं की रिपोर्ट करें...",
+    submit: "प्रतिक्रिया भेजें",
+    success: "धन्यवाद! आपकी प्रतिक्रिया हमें आगे बढ़ने में मदद करती है।",
+    ratingLabel: "अपना अनुभव रेट करें:"
+  },
   sceneLabel: "दृश्य में क्या हो रहा है?",
   placeholder: "उदा. एक लड़का ऐतिहासिक बगीचे में प्लास्टिक की बोतल फेंक रहा है...",
   clear: "साफ़ करें",
@@ -322,7 +340,8 @@ const mr = {
     impact: "प्रभाव",
     team: "टीम",
     contact: "संपर्क",
-    launch: "स्टुडिओ सुरू करा"
+    launch: "स्टुडिओ सुरू करा",
+    feedback: "अभिप्राय"
   },
   hero: {
     title: "इतिहासाचे जतन",
@@ -400,6 +419,14 @@ const mr = {
     successDesc: "पुढील पेमेंट तपशील आणि सूचना तुमच्या ईमेल आयडीवर पाठवल्या आहेत. पेमेंट कन्फर्मेशननंतर तुम्हाला लिंक मिळेल.",
     downloadBtn: "बंद करा",
     secureBadge: "सुरक्षित नोंदणी"
+  },
+  feedback: {
+    title: "तुमचा अभिप्राय महत्त्वाचा आहे",
+    subtitle: "CulturaX अनुभव सुधारण्यास आम्हाला मदत करा.",
+    placeholder: "तुमचे विचार, सूचना सामायिक करा किंवा समस्या कळवा...",
+    submit: "अभिप्राय पाठवा",
+    success: "धन्यवाद! तुमचा अभिप्राय आम्हाला प्रगती करण्यास मदत करतो.",
+    ratingLabel: "तुमचा अनुभव रेट करा:"
   },
   sceneLabel: "दृश्यात काय घडत आहे?",
   placeholder: "उदा. ऐतिहासिक बागेत कचरा टाकणारा मुलगा...",
@@ -498,7 +525,7 @@ export const translations = {
   ta: withFallback({ 
     appTitle: "CulturaX", 
     subtitle: "குடிமைப் பண்பு காமிக் உருவாக்கி",
-    nav: {home:"முகப்பு", features:"அம்சங்கள்", downloads:"பதிவிறக்கங்கள்", impact:"தாக்கம்", team:"குழு", contact:"தொடர்பு", launch:"தொடங்கு"}, 
+    nav: {home:"முகப்பு", features:"அம்சங்கள்", downloads:"பதிவிறக்கங்கள்", impact:"தாக்கம்", team:"குழு", contact:"தொடர்பு", launch:"தொடங்கு", feedback: "கருத்து"}, 
     hero: { title: "வரலாற்றைப் பாதுகாத்தல்", highlight: "AR கண்டுபிடிப்புடன்", desc: "CulturaX இந்தியாவின் கலாச்சார பாரம்பரியத்தை AR மூலம் உயிர்ப்பிக்கிறது.", tryNow: "முயற்சி செய்", demo: "AR செயல்விளக்கம்", demoDesc: "தாஜ்மஹாலை AR இல் காண்க" },
     features: { title: "முக்கிய அம்சங்கள்", f1: {t: "ஆஃப்லைன் AR", d: "இணையம் இல்லாமல் அணுகலாம்"}, f2: {t: "துல்லியமான கண்காணிப்பு", d: "அனைத்து சாதனங்களிலும் நிலையானது"}, f3: {t: "கற்றல்", d: "கல்வி மற்றும் சுற்றுலாவிற்கு சிறந்தது"}, f6: {t: "பாதுகாப்பு", d: "வரலாற்று சின்னங்களை பாதுகாத்தல்"} },
     downloads: { title: "எங்கள் செயலிகள்", subtitle: "எங்கள் மொபைல் செயலிகளுடன் CulturaX ஐ அனுபவிக்கவும்.", bookletTitle: "CulturaX கையேடு AR", bookletDesc: "AR இயக்கப்பட்ட கையேடுகள் மூலம் ஊடாடும் கற்றல்.", bookletBuy: "பதிவிறக்க", gpTitle: "CulturaX வரைபடம் AR", gpDesc: "3D இல் கட்டிடக்கலை வரைபடங்களைக் காண்க.", downloadApk: "APK பதிவிறக்க", offlineTag: "ஆஃப்லைன் பயன்முறை", onlineTag: "ஆன்லைன் பயன்முறை" },
@@ -520,12 +547,13 @@ export const translations = {
     comicBook: {title:"Guardian's Chronicles", subtitle:"Tales of Respect", nextBtn:"Next", prevBtn:"Prev", page:"Page", official:"Official", userStory:"User Created", empty:"Create more!"}, 
     officialStories: {s1:"Cleanliness is next to Godliness.", s2:"Atithi Devo Bhava.", s3:"Do not write on walls.", s4:"Keep volume down."},
     quiz: { button: "வினாடி வினா", title: "குடிமைப் பண்பு சவால்", loading: "ஏற்றுகிறது...", next: "அடுத்தது", resultTitle: "முடிந்தது!", greatJob: "அற்புதம்!", goodTry: "நன்றாக முயற்சித்தீர்கள்!", score: "மதிப்பெண்:", restart: "மீண்டும் விளையாடு", close: "மூடு" },
-    shareStory: { button: "கதையைப் பகிரவும்", generating: "உருவாக்குகிறது...", success: "தயார்!", error: "தோல்வி" }
+    shareStory: { button: "கதையைப் பகிரவும்", generating: "உருவாக்குகிறது...", success: "தயார்!", error: "தோல்வி" },
+    feedback: { title: "உங்கள் கருத்து முக்கியமானது", subtitle: "மேம்படுத்த உதவுங்கள்.", placeholder: "உங்கள் கருத்துக்களை இங்கே பகிரவும்...", submit: "அனுப்பவும்", success: "நன்றி!", ratingLabel: "மதிப்பிடவும்:" }
   }),
   te: withFallback({ 
     appTitle: "CulturaX", 
     subtitle: "పౌర స్పృహ కామిక్ సృష్టికర్త",
-    nav: {home:"హోమ్", features:"ఫీచర్లు", downloads:"డౌన్‌లోడ్లు", impact:"ప్రభావం", team:"బృందం", contact:"సంప్రదించండి", launch:"ప్రారంభించు"}, 
+    nav: {home:"హోమ్", features:"ఫీచర్లు", downloads:"డౌన్‌లోడ్లు", impact:"ప్రభావం", team:"బృందం", contact:"సంప్రదించండి", launch:"ప్రారంభించు", feedback: "అభిప్రాయం"}, 
     hero: { title: "చరిత్ర పరిరక్షణ", highlight: "AR ఆవిష్కరణతో", desc: "CulturaX భారతదేశ సాంస్కృతిక వారసత్వాన్ని AR ద్వారా జీవం పోస్తుంది.", tryNow: "ప్రయత్నించండి", demo: "డెమో", demoDesc: "తాజ్ మహల్ AR లో చూడండి" },
     features: { title: "ముఖ్య లక్షణాలు", f1: {t: "ఆఫ్‌లైన్ AR", d: "ఇంటర్నెట్ లేకుండా యాక్సెస్"}, f2: {t: "ఖచ్చితమైన ట్రాకింగ్", d: "అన్ని పరికరాల్లో స్థిరంగా ఉంటుంది"}, f3: {t: "లెర్నింగ్", d: "విద్య మరియు పర్యాటకానికి ఉత్తమం"}, f6: {t: "పరిరక్షణ", d: "చారిత్రక కట్టడాల రక్షణ"} },
     downloads: { title: "యాప్‌లు డౌన్‌లోడ్ చేయండి", subtitle: "CulturaX ని పూర్తిగా అనుభవించండి.", bookletTitle: "CulturaX బుక్‌లెట్ AR", bookletDesc: "AR పుస్తకాల ద్వారా ఇంటరాక్టివ్ లెర్నింగ్.", bookletBuy: "డౌన్‌లోడ్", gpTitle: "CulturaX గ్రౌండ్‌ప్లాన్ AR", gpDesc: "3D లో నిర్మాణ లేఅవుట్‌లను చూడండి.", downloadApk: "APK డౌన్‌లోడ్", offlineTag: "ఆఫ్‌లైన్ మోడ్", onlineTag: "ఆన్‌లైన్ మోడ్" },
@@ -547,12 +575,13 @@ export const translations = {
     comicBook: {title:"Guardian's Chronicles", subtitle:"Tales of Respect", nextBtn:"Next", prevBtn:"Prev", page:"Page", official:"Official", userStory:"User Created", empty:"Create more!"}, 
     officialStories: {s1:"Cleanliness is next to Godliness.", s2:"Atithi Devo Bhava.", s3:"Do not write on walls.", s4:"Keep volume down."},
     quiz: { button: "క్విజ్", title: "పౌర స్పృహ సవాలు", loading: "లోడ్ అవుతోంది...", next: "తరువాత", resultTitle: "పూర్తయింది!", greatJob: "అద్భుతం!", goodTry: "మంచి ప్రయత్నం!", score: "స్కోరు:", restart: "మళ్ళీ ఆడండి", close: "మూసివేయి" },
-    shareStory: { button: "కథను భాగస్వామ్యం చేయండి", generating: "సృష్టిస్తోంది...", success: "సిద్ధం!", error: "విఫలమైంది" }
+    shareStory: { button: "కథను భాగస్వామ్యం చేయండి", generating: "సృష్టిస్తోంది...", success: "సిద్ధం!", error: "విఫలమైంది" },
+    feedback: { title: "మీ అభిప్రాయం ముఖ్యం", subtitle: "మాకు మెరుగుపరచడంలో సహాయపడండి.", placeholder: "మీ అభిప్రాయాన్ని ఇక్కడ వ్రాయండి...", submit: "పంపండి", success: "ధన్యవాదాలు!", ratingLabel: "రేట్ చేయండి:" }
   }),
   ml: withFallback({ 
     appTitle: "CulturaX", 
     subtitle: "പൗരബോധ കോമിക് ക്രിയേറ്റർ",
-    nav: {home:"ഹോം", features:"സവിശേഷതകൾ", downloads:"ഡൗൺലോഡുകൾ", impact:"സ്വാധീനം", team:"ടീം", contact:"ബന്ധപ്പെടുക", launch:"തുടങ്ങുക"}, 
+    nav: {home:"ഹോം", features:"സവിശേഷതകൾ", downloads:"ഡൗൺലോഡുകൾ", impact:"സ്വാധീനം", team:"ടീം", contact:"ബന്ധപ്പെടുക", launch:"തുടങ്ങുക", feedback: "അഭിപ്രായം"}, 
     hero: { title: "ചരിത്രം സംരക്ഷിക്കുന്നു", highlight: "AR ഇന്നൊവേഷൻ ഉപയോഗിച്ച്", desc: "CulturaX ഇന്ത്യയുടെ സാംസ്കാരിക പൈതൃകം AR വഴി സജീവമാക്കുന്നു.", tryNow: "ശ്രമിക്കുക", demo: "ഡെമോ", demoDesc: "താജ് മഹൽ AR-ൽ കാണുക" },
     features: { title: "പ്രധാന സവിശേഷതകൾ", f1: {t: "ഓഫ്‌ലൈൻ AR", d: "ഇന്റർനെറ്റ് ഇല്ലാതെ ആക്സസ് ചെയ്യാം"}, f2: {t: "കൃത്യമായ ട്രാക്കിംഗ്", d: "എല്ലാ ഉപകരണങ്ങളിലും കൃത്യത"}, f3: {t: "പഠനം", d: "വിദ്യാഭ്യാസത്തിനും വിനോദ സഞ്ചാരത്തിനും"}, f6: {t: "സംരക്ഷണം", d: "ചരിത്ര സ്മാരകങ്ങളുടെ ഡിജിറ്റൽ സംരക്ഷണം"} },
     downloads: { title: "ആപ്പുകൾ ഡൗൺലോഡ് ചെയ്യുക", subtitle: "CulturaX പൂർണ്ണമായി അനുഭവിക്കുക.", bookletTitle: "CulturaX ബുക്ക്‌ലെറ്റ് AR", bookletDesc: "AR ബുക്ക്‌ലെറ്റുകൾ വഴി പഠനം.", bookletBuy: "ഡൗൺലോഡ്", gpTitle: "CulturaX ഗ്രൗണ്ട്പ്ലാൻ AR", gpDesc: "3D-യിൽ കെട്ടിടങ്ങളുടെ രൂപരേഖ കാണുക.", downloadApk: "APK ഡൗൺലോഡ്", offlineTag: "ഓഫ്‌ലൈൻ മോഡ്", onlineTag: "ഓൺലൈൻ മോഡ്" },
@@ -574,12 +603,13 @@ export const translations = {
     comicBook: {title:"Guardian's Chronicles", subtitle:"Tales of Respect", nextBtn:"Next", prevBtn:"Prev", page:"Page", official:"Official", userStory:"User Created", empty:"Create more!"}, 
     officialStories: {s1:"Cleanliness is next to Godliness.", s2:"Atithi Devo Bhava.", s3:"Do not write on walls.", s4:"Keep volume down."},
     quiz: { button: "ക്വിസ്", title: "പൗരബോധ വെല്ലുവിളി", loading: "തയ്യാറാക്കുന്നു...", next: "അടുത്തത്", resultTitle: "പൂർത്തിയായി!", greatJob: "അടിപൊളി!", goodTry: "നല്ല ശ്രമം!", score: "സ്കോർ:", restart: "വീണ്ടും കളിക്കുക", close: "അടയ്ക്കുക" },
-    shareStory: { button: "കഥ പങ്കിടുക", generating: "നിർമ്മിക്കുന്നു...", success: "തയ്യാർ!", error: "പരാജയപ്പെട്ടു" }
+    shareStory: { button: "കഥ പങ്കിടുക", generating: "നിർമ്മിക്കുന്നു...", success: "തയ്യാർ!", error: "പരാജയപ്പെട്ടു" },
+    feedback: { title: "നിങ്ങളുടെ അഭിപ്രായം", subtitle: "മെച്ചപ്പെടുത്താൻ സഹായിക്കുക.", placeholder: "ഇവിടെ എഴുതുക...", submit: "അയക്കുക", success: "നന്ദി!", ratingLabel: "റേറ്റ് ചെയ്യുക:" }
   }),
   or: withFallback({ 
     appTitle: "CulturaX", 
     subtitle: "ସିଭିକ ସେନ୍ସ କମିକ ନିର୍ମାତା", 
-    nav: {home:"ମୁଖ୍ୟ ପୃଷ୍ଠା", features:"ବୈଶିଷ୍ଟ୍ୟ", downloads:"ଡାଉନଲୋଡ୍", impact:"ପ୍ରଭାବ", team:"ଟିମ୍", contact:"ଯୋଗାଯୋଗ", launch:"ଆରମ୍ଭ କରନ୍ତୁ"}, 
+    nav: {home:"ମୁଖ୍ୟ ପୃଷ୍ଠା", features:"ବୈଶିଷ୍ଟ୍ୟ", downloads:"ଡାଉନଲୋଡ୍", impact:"ପ୍ରଭାବ", team:"ଟିମ୍", contact:"ଯୋଗାଯୋଗ", launch:"ଆରମ୍ଭ କରନ୍ତୁ", feedback: "ମତାମତ"}, 
     hero: { title: "ଇତିହାସର ସଂରକ୍ଷଣ", highlight: "AR ଉଦ୍ଭାବନ ସହିତ", desc: "CulturaX ଭାରତର ସାଂସ୍କୃତିକ ଐତିହ୍ୟକୁ ଇମର୍ସିଭ୍ ଅଗମେଣ୍ଟେଡ୍ ରିଆଲିଟି ବ୍ୟବହାର କରି ଜୀବନ୍ତ କରିଥାଏ |", tryNow: "ବର୍ତ୍ତମାନ ଚେଷ୍ଟା କରନ୍ତୁ", demo: "ଇଣ୍ଟରାକ୍ଟିଭ୍ ଡେମୋ", demoDesc: "AR ରେ ତାଜମହଲ ଅନୁଭବ କରନ୍ତୁ" },
     why: { title: "CulturaX କାହିଁକି?", items: [ "ଦୂର ସ୍ଥାନ ପାଇଁ ଅଫଲାଇନ୍ AR ଅନୁଭୂତି", "360° ଇମର୍ସିଭ୍ ସ୍ମାରକୀ ପୁନନିର୍ମାଣ", "ବିଦ୍ୟାଳୟ ଏବଂ କଲେଜ ପାଇଁ ଶିକ୍ଷାଗତ ପ୍ଲାଟଫର୍ମ", "ସାଂସ୍କୃତିକ ଶିକ୍ଷା ପାଇଁ ଇଣ୍ଟରାକ୍ଟିଭ୍ କାହାଣୀ", "କମ୍ ମୂଲ୍ୟର ଡିଭାଇସ୍ ପାଇଁ ତିଆରି", "ଭାରତର ଐତିହାସିକ ସ୍ଥଳଗୁଡିକର ଡିଜିଟାଲ୍ ସଂରକ୍ଷଣ" ] },
     features: { title: "ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟ", f1: { t: "ଅଫଲାଇନ୍ AR ଆକ୍ସେସ୍", d: "ଇଣ୍ଟରନେଟ୍ ବିନା ଯେକୌଣସି ସମୟରେ ସ୍ମାରକୀ ଅନୁସନ୍ଧାନ କରନ୍ତୁ" }, f2: { t: "ମାର୍କର-ଆଧାରିତ ସଠିକତା", d: "ସମସ୍ତ ଡିଭାଇସ୍ ରେ ସ୍ଥିର ଦେଖିବା ପାଇଁ ନିର୍ଭରଯୋଗ୍ୟ AR ଟ୍ରାକିଂ" }, f3: { t: "ଇମର୍ସିଭ୍ ଶିକ୍ଷା", d: "ପର୍ଯ୍ୟଟନ ଏବଂ ଶିକ୍ଷା ପାଇଁ ଉତ୍ତମ" }, f4: { t: "ଉଚ୍ଚ ପ୍ରଦର୍ଶନ", d: "ସ୍ମୁଥ୍ ପ୍ରଦର୍ଶନ ପାଇଁ ଅପ୍ଟିମାଇଜ୍ ହୋଇଥିବା 3D ମଡେଲ୍" }, f5: { t: "କ୍ରସ୍-ପ୍ଲାଟଫର୍ମ", d: "Android ଏବଂ iOS ରେ ସହଜରେ କାମ କରେ" }, f6: { t: "ସାଂସ୍କୃତିକ ସଂରକ୍ଷଣ", d: "ଭବିଷ୍ୟତ ପିଢି ପାଇଁ ଭାରତର ସ୍ମାରକୀଗୁଡିକୁ ଡିଜିଟାଲ୍ ସଂରକ୍ଷଣ କରିବା" } },
@@ -607,11 +637,12 @@ export const translations = {
     shareStory: { button: "ସମ୍ପୂର୍ଣ୍ଣ କାହାଣୀ ସେୟାର୍ କରନ୍ତୁ", generating: "କୋଲାଜ୍ ତିଆରି ହେଉଛି...", success: "କାହାଣୀ ପ୍ରସ୍ତୁତ!", error: "କାହାଣୀ ତିଆରି ହୋଇପାରିଲା ନାହିଁ" },
     tabs: { studio: "କ୍ରିଏଟିଭ୍ ଷ୍ଟୁଡିଓ", book: "ଗାର୍ଡିଆନ୍ କ୍ରୋନିକଲ୍ସ" },
     comicBook: { title: "ଗାର୍ଡିଆନ୍ କ୍ରୋନିକଲ୍ସ", subtitle: "ସମ୍ମାନ ଏବଂ ଯତ୍ନର କାହାଣୀ", nextBtn: "ପରବର୍ତ୍ତୀ", prevBtn: "ପୂର୍ବ", page: "ପୃଷ୍ଠା", official: "ଅଫିସିଆଲ୍ କାହାଣୀ", userStory: "ୟୁଜର ତିଆରି କରିଛନ୍ତି", empty: "ଅଧିକ କାହାଣୀ ତିଆରି କରନ୍ତୁ!" },
-    officialStories: { s1: "ପରିଷ୍କାର ପରିଚ୍ଛନ୍ନତା ଭଗବାନଙ୍କ ସମାନ", s2: "ଅତିଥି ଦେବୋ ଭବ", s3: "କାନ୍ଥରେ ଲେଖନ୍ତୁ ନାହିଁ", s4: "ଶବ୍ଦ କମ୍ ରଖନ୍ତୁ" }
+    officialStories: { s1: "ପରିଷ୍କାର ପରିଚ୍ଛନ୍ନତା ଭଗବାନଙ୍କ ସମାନ", s2: "ଅତିଥି ଦେବୋ ଭବ", s3: "କାନ୍ଥରେ ଲେଖନ୍ତୁ ନାହିଁ", s4: "ଶବ୍ଦ କମ୍ ରଖନ୍ତୁ" },
+    feedback: { title: "ଆପଣଙ୍କ ମତାମତ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ", subtitle: "ଆମକୁ ଉନ୍ନତି କରିବାରେ ସାହାଯ୍ୟ କରନ୍ତୁ |", placeholder: "ଆପଣଙ୍କ ମତାମତ ଏଠାରେ ଲେଖନ୍ତୁ...", submit: "ମତାମତ ପଠାନ୍ତୁ", success: "ଧନ୍ୟବାଦ!", ratingLabel: "ରେଟିଂ ଦିଅନ୍ତୁ:" }
   }),
   es: withFallback({ 
     appTitle: "CulturaX", 
-    nav: {home:"Inicio", features:"Características", downloads:"Descargas", impact:"Impact", team:"Equipo", contact:"Contacto", launch:"Iniciar Estudio"}, 
+    nav: {home:"Inicio", features:"Características", downloads:"Descargas", impact:"Impact", team:"Equipo", contact:"Contacto", launch:"Iniciar Estudio", feedback: "Feedback"}, 
     tabs: {studio:"Studio", book:"Guardian's Chronicles"}, 
     comicBook: {title:"Guardian's Chronicles", subtitle:"Tales of Respect", nextBtn:"Next", prevBtn:"Prev", page:"Page", official:"Official", userStory:"User Created", empty:"Create more!"}, 
     officialStories: {s1:"Cleanliness is next to Godliness.", s2:"Atithi Devo Bhava.", s3:"Do not write on walls.", s4:"Keep volume down."},
@@ -619,7 +650,7 @@ export const translations = {
   }),
   fr: withFallback({ 
     appTitle: "CulturaX", 
-    nav: {home:"Accueil", features:"Fonctionnalités", downloads:"Téléchargements", impact:"Impact", team:"Équipe", contact:"Contact", launch:"Lancer Studio"}, 
+    nav: {home:"Accueil", features:"Fonctionnalités", downloads:"Téléchargements", impact:"Impact", team:"Équipe", contact:"Contact", launch:"Lancer Studio", feedback: "Commentaires"}, 
     tabs: {studio:"Studio", book:"Guardian's Chronicles"}, 
     comicBook: {title:"Guardian's Chronicles", subtitle:"Tales of Respect", nextBtn:"Next", prevBtn:"Prev", page:"Page", official:"Official", userStory:"User Created", empty:"Create more!"}, 
     officialStories: {s1:"Cleanliness is next to Godliness.", s2:"Atithi Devo Bhava.", s3:"Do not write on walls.", s4:"Keep volume down."},

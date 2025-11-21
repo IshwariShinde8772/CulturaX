@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { ChevronRight, Smartphone, Globe, Box, Users, Mail, Download, Layers, Cpu, Moon, Sun, Eye, ShoppingCart, Wifi, WifiOff } from 'lucide-react';
 import { translations, languageOptions, LanguageCode } from '../translations';
 import { PurchaseModal } from './PurchaseModal';
+import { FeedbackSection } from './FeedbackSection';
 
 interface LandingPageProps {
   onStartApp: () => void;
@@ -161,7 +162,8 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                           { id: 'features', label: t.nav.features },
                           { id: 'downloads', label: t.nav.downloads },
                           { id: 'impact', label: t.nav.impact },
-                          { id: 'team', label: t.nav.team }
+                          { id: 'team', label: t.nav.team },
+                          { id: 'feedback', label: t.nav.feedback }
                         ].map((item) => (
                             <button 
                                 key={item.id} 
@@ -410,6 +412,9 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                 </div>
              </div>
         </section>
+
+        {/* Feedback Section */}
+        <FeedbackSection currentLanguage={currentLanguage} isDarkMode={isDarkMode} />
 
         {/* Footer */}
         <footer id="contact" className="relative z-10 py-12 bg-heritage-brown dark:bg-black border-t border-white/10 dark:border-tech-purple/20 text-center text-white">
