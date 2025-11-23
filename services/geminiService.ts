@@ -31,30 +31,58 @@ export const generateCaption = async (scenario: string, language: string): Promi
  */
 export const generateImagePanel = async (scenario: string, caption: string, language: string): Promise<string | null> => {
   try {
-    // We use the specific model requested for Nano/Flash Image capabilities
+    // Using 'gemini-2.5-flash-image' (Nano Banana) as requested for free API access.
+    // This model is reliable and generally does not require a billing project like gemini-3-pro.
     const model = 'gemini-2.5-flash-image';
     
+    // Clean up language label to ensure the model understands the target script clearly
+    // e.g. "हिंदी (Hindi)" -> "Hindi"
+    const languageName = language.split('(')[1]?.replace(')', '').trim() || language.split('(')[0].trim();
+
     const prompt = `
-      Create a complete 4-panel comic strip (2x2 grid layout) illustration in 16:9 aspect ratio.
-      Style: Indian heritage watercolor-ink style with fine ink outlines and soft, bleeding washes.
-      Subject: A story about ${scenario} teaching a civic sense lesson.
-      Layout: 
-      - Divide the image into 4 clear distinct panels.
-      - Panel 1: Show the initial action (e.g., someone doing something wrong or starting a journey).
-      - Panel 2: Show the reaction or consequence of the action.
-      - Panel 3: Show a wise character (like a heritage guardian or elder) explaining the right thing to do.
-      - Panel 4: Show the happy resolution with everyone doing the right thing.
-      Text Integration: 
-      - The text must be in ${language}.
-      - Include speech bubbles with simple dialogue in ${language} in the panels.
-      - Include the main caption "${caption}" prominently, either as a title or in the final panel.
-      Atmosphere: Educational, cultural, vibrant but soft watercolor.
-      Characters: Indian styling, friendly expressions.
+      Create a visually stunning, masterpiece-quality 4-panel comic strip (2x2 grid layout).
+      
+      **Visual Style:**
+      - Style: High-fidelity Indian heritage watercolor illustration with fine ink detailing.
+      - Resolution: High definition, sharp focus.
+      - Color Palette: Rich, vibrant, and warm tones suitable for Indian cultural settings.
+      - Composition: Professional cinematic angles for each panel.
+      
+      **Story Scenario:**
+      A short story depicting: "${scenario}" which teaches a civic sense lesson.
+      
+      **Panel Breakdown:**
+      1. **The Incident:** Depict the initial action or problem clearly.
+      2. **The Reaction:** Show the immediate consequence or emotional reaction.
+      3. **The Guidance:** A character explaining the right thing to do (civic sense).
+      4. **The Solution:** A happy resolution showing the positive outcome.
+
+      **CRITICAL TEXT & LANGUAGE INSTRUCTIONS:**
+      - **Target Language:** **${languageName}**
+      - **Speech Bubbles:** Generate speech bubbles with dialogue written in the **${languageName}** script.
+      - **Strict Constraint:** Do NOT use English text inside the image if the target language is ${languageName} (unless ${languageName} is English).
+      - **Legibility:** Ensure the characters are formed correctly, legible, and clear.
+      - **Caption:** Integrate the caption "${caption}" artistically in the final panel (in ${languageName}).
+
+      **Negative Constraints:**
+      - Do not generate blurry or distorted text.
+      - Do not mix scripts (e.g., do not mix Latin and Devanagari).
+      - Do not generate photorealistic images; keep it watercolor art style.
+
+      **Character & Setting Details:**
+      - Characters should wear culturally appropriate Indian clothing.
+      - Facial expressions must be expressive and clear.
+      - Backgrounds should be detailed heritage sites or public places.
     `;
 
     const response: GenerateContentResponse = await ai.models.generateContent({
       model: model,
       contents: prompt,
+      config: {
+        imageConfig: {
+          aspectRatio: "16:9",
+        }
+      }
     });
 
     // Extract the image from the parts
@@ -87,7 +115,7 @@ export const editImagePanel = async (imageBase64: string, instruction: string): 
       model: model,
       contents: {
         parts: [
-            { text: instruction },
+            { text: `Edit this comic panel: ${instruction}. Maintain the high-quality watercolor style.` },
             {
                 inlineData: {
                     mimeType: 'image/png',
@@ -95,6 +123,11 @@ export const editImagePanel = async (imageBase64: string, instruction: string): 
                 }
             }
         ]
+      },
+      config: {
+        imageConfig: {
+          aspectRatio: "16:9"
+        }
       }
     });
 
