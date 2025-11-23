@@ -125,6 +125,7 @@ const en = {
     read: "Read Aloud"
   },
   errorGen: "Oops! The artists dropped their brushes. Please try again.",
+  errorApiKey: "Connection Error: Please check Vercel Environment Variables (VITE_API_KEY).",
   errorEdit: "Magic spell failed! Could not edit the image.",
   quiz: {
     button: "Take the Quiz!",
@@ -289,6 +290,7 @@ const hi = {
     read: "जोर से पढ़ें"
   },
   errorGen: "उफ़! कलाकारों ने अपने ब्रश गिरा दिए। कृपया पुनः प्रयास करें।",
+  errorApiKey: "कनेक्शन त्रुटि: कृपया Vercel पर API Key की जाँच करें (VITE_API_KEY)।",
   errorEdit: "जादुई मंत्र विफल! छवि को संपादित नहीं कर सका।",
   quiz: {
     button: "प्रश्नोत्तरी खेलें!",
@@ -417,7 +419,7 @@ const mr = {
     processing: "विनंती पाठवत आहे...",
     successTitle: "विनंती स्वीकारली!",
     successDesc: "पुढील पेमेंट तपशील आणि सूचना तुमच्या ईमेल आयडीवर पाठवल्या आहेत. पेमेंट कन्फर्मेशननंतर तुम्हाला लिंक मिळेल.",
-    downloadBtn: "बंद करा",
+    downloadBtn: "बंद करें",
     secureBadge: "सुरक्षित नोंदणी"
   },
   feedback: {
@@ -453,6 +455,7 @@ const mr = {
     read: "मोठ्याने वाचा"
   },
   errorGen: "अरेरे! काहीतरी चूक झाली. कृपया पुन्हा प्रयत्न करा.",
+  errorApiKey: "कनेक्शन त्रुटी: कृपया Vercel वर API Key तपासा (VITE_API_KEY).",
   errorEdit: "संपादन अयशस्वी झाले.",
   quiz: {
     button: "क्विझ खेळा!",
@@ -632,6 +635,7 @@ export const translations = {
     ep: "ଅଧ୍ୟାୟ",
     tooltips: { edit: "ସମ୍ପାଦନ କରନ୍ତୁ", download: "ଡାଉନଲୋଡ୍", share: "ସେୟାର୍", delete: "ଡିଲିଟ୍", read: "ଜୋରରେ ପଢନ୍ତୁ" },
     errorGen: "କ୍ଷମା କରିବେ! କିଛି ଭୁଲ୍ ହେଲା |",
+    errorApiKey: "Vercel Environment Variables (VITE_API_KEY) ଯାଞ୍ଚ କରନ୍ତୁ |",
     errorEdit: "ସମ୍ପାଦନ ବିଫଳ ହେଲା |",
     quiz: { button: "କୁଇଜ୍ ଖେଳନ୍ତୁ!", title: "ସିଭିକ ସେନ୍ସ ଚ୍ୟାଲେଞ୍ଜ", loading: "ଆପଣଙ୍କ ଚ୍ୟାଲେଞ୍ଜ ପ୍ରସ୍ତୁତ ହେଉଛି...", next: "ପରବର୍ତ୍ତୀ ପ୍ରଶ୍ନ", resultTitle: "କୁଇଜ୍ ସମାପ୍ତ!", greatJob: "ବହୁତ ଭଲ! ଆପଣ ଜଣେ ପ୍ରକୃତ ଐତିହ୍ୟ ରକ୍ଷକ!", goodTry: "ଭଲ ଚେଷ୍ଟା! ଆମର ଇତିହାସର ସୁରକ୍ଷା କରିବା ଶିଖନ୍ତୁ |", score: "ଆପଣଙ୍କ ସ୍କୋର:", restart: "ପୁନର୍ବାର ଖେଳନ୍ତୁ", close: "ବନ୍ଦ କରନ୍ତୁ" },
     shareStory: { button: "ସମ୍ପୂର୍ଣ୍ଣ କାହାଣୀ ସେୟାର୍ କରନ୍ତୁ", generating: "କୋଲାଜ୍ ତିଆରି ହେଉଛି...", success: "କାହାଣୀ ପ୍ରସ୍ତୁତ!", error: "କାହାଣୀ ତିଆରି ହୋଇପାରିଲା ନାହିଁ" },

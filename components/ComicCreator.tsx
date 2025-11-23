@@ -94,9 +94,20 @@ export const ComicCreator: React.FC<ComicCreatorProps> = ({
       }
       
       setLoadingState(LoadingState.COMPLETE);
-    } catch (err) {
+    } catch (err: any) {
       console.error(err);
-      setError(t.errorGen);
+      
+      // Determine error message for better debugging on Vercel
+      let errorMessage = t.errorGen;
+      if (err.message) {
+         if (err.message.includes('403') || err.message.includes('400')) {
+             errorMessage = t.errorApiKey || "API Key Error: Check Vercel Env Vars.";
+         } else {
+             errorMessage = `${t.errorGen} (${err.message})`;
+         }
+      }
+      
+      setError(errorMessage);
       setLoadingState(LoadingState.ERROR);
     } finally {
       setTimeout(() => setLoadingState(LoadingState.IDLE), 2000);
