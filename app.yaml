@@ -1,0 +1,13 @@
+runtime: python39
+
+handlers:
+  # Serve all static files from the dist directory
+  - url: /(.*\.(js|css|png|jpg|svg|json|ico|txt))$
+    static_files: dist/\1
+    upload: dist/.*\.(js|css|png|jpg|svg|json|ico|txt)$
+
+  # Catch-all handler for Single Page Applications (SPA)
+  # This routes all other URLs to index.html so React Router works
+  - url: /.*
+    static_files: dist/index.html
+    upload: dist/index.html

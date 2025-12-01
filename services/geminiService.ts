@@ -1,27 +1,36 @@
-
 import { GoogleGenAI, GenerateContentResponse, Type } from "@google/genai";
 import { QuizQuestion } from "../types";
 
-// Helper to safely get API Key in different environments (Vite vs Node/Next)
+// Helper to safely get API Key
 const getApiKey = (): string => {
-  // 1. Check Vite environment (Localhost)
+  let key = '';
+  
+  // 1. Check Vite environment (Localhost & Netlify/Vercel)
   try {
     // @ts-ignore
     if (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_API_KEY) {
       // @ts-ignore
-      return import.meta.env.VITE_API_KEY;
+      key = import.meta.env.VITE_API_KEY;
     }
   } catch (e) {}
 
-  // 2. Check Node/Process environment
-  try {
-    if (typeof process !== 'undefined' && process.env && process.env.API_KEY) {
-      return process.env.API_KEY;
-    }
-  } catch (e) {}
+  // 2. Check Node environment
+  if (!key) {
+    try {
+      if (typeof process !== 'undefined' && process.env && process.env.API_KEY) {
+        key = process.env.API_KEY;
+      }
+    } catch (e) {}
+  }
 
-  // 3. Fallback to hardcoded key provided by user
-  return 'AIzaSyA3L4WUNI-07L4126RWu6nQEAJvzw19AOo';
+  // 3. Panic if missing
+  if (!key) {
+    console.error("CRITICAL: API Key is missing. Please set VITE_API_KEY in your environment variables (Netlify/Vercel).");
+    // We return an empty string, which will cause the API call to fail with a clear message in the UI
+    return ''; 
+  }
+
+  return key;
 };
 
 const apiKey = getApiKey();
@@ -51,12 +60,7 @@ export const generateCaption = async (scenario: string, language: string): Promi
  */
 export const generateImagePanel = async (scenario: string, caption: string, language: string): Promise<string | null> => {
   try {
-    // Using 'gemini-2.5-flash-image' (Nano Banana) as requested for free API access.
-    // This model is reliable and generally does not require a billing project like gemini-3-pro.
     const model = 'gemini-2.5-flash-image';
-    
-    // Clean up language label to ensure the model understands the target script clearly
-    // e.g. "हिंदी (Hindi)" -> "Hindi"
     const languageName = language.split('(')[1]?.replace(')', '').trim() || language.split('(')[0].trim();
 
     const prompt = `
@@ -88,11 +92,6 @@ export const generateImagePanel = async (scenario: string, caption: string, lang
       - Do not generate blurry or distorted text.
       - Do not mix scripts (e.g., do not mix Latin and Devanagari).
       - Do not generate photorealistic images; keep it watercolor art style.
-
-      **Character & Setting Details:**
-      - Characters should wear culturally appropriate Indian clothing.
-      - Facial expressions must be expressive and clear.
-      - Backgrounds should be detailed heritage sites or public places.
     `;
 
     const response: GenerateContentResponse = await ai.models.generateContent({
@@ -105,7 +104,6 @@ export const generateImagePanel = async (scenario: string, caption: string, lang
       }
     });
 
-    // Extract the image from the parts
     if (response.candidates && response.candidates[0].content.parts) {
       for (const part of response.candidates[0].content.parts) {
         if (part.inlineData && part.inlineData.data) {
@@ -127,8 +125,6 @@ export const generateImagePanel = async (scenario: string, caption: string, lang
 export const editImagePanel = async (imageBase64: string, instruction: string): Promise<string | null> => {
   try {
     const model = 'gemini-2.5-flash-image';
-    
-    // Strip prefix if present
     const cleanBase64 = imageBase64.replace(/^data:image\/(png|jpeg|jpg|webp);base64,/, "");
 
     const response: GenerateContentResponse = await ai.models.generateContent({

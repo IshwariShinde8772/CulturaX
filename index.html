@@ -19,17 +19,14 @@
               'sans': ['"Quicksand"', 'sans-serif'],
             },
             colors: {
-              // Light Mode (Heritage)
               'heritage-cream': '#F9F5EB',
               'heritage-paper': '#F0EAD6',
               'heritage-brown': '#4A3B2C',
-              'heritage-accent': '#C19A6B', // Antique Gold
-              
-              // Dark Mode (Black & Yellow)
-              'ar-dark': '#000000', // Pure Black
-              'ar-gold': '#FFD700', // Gold
-              'tech-purple': '#FACC15', // Yellow-400 (Renamed concept, keeping var name for compatibility)
-              'tech-pink': '#FFFFFF',   // White (High Contrast)
+              'heritage-accent': '#C19A6B',
+              'ar-dark': '#000000',
+              'ar-gold': '#FFD700',
+              'tech-purple': '#FACC15',
+              'tech-pink': '#FFFFFF',
               'watercolor-blue': '#00f3ff', 
               'watercolor-red': '#ff0055',
             },
@@ -48,36 +45,12 @@
       }
     </script>
     <style>
-      /* Smooth theme transition */
-      body {
-        transition: background-color 0.5s ease, color 0.5s ease;
-      }
-      
-      /* Custom Scrollbar */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: rgba(0,0,0,0.1);
-      }
-      .dark ::-webkit-scrollbar-track {
-        background: #111;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #8b7355; /* Heritage Brownish */
-        border-radius: 4px;
-      }
-      .dark ::-webkit-scrollbar-thumb {
-        background: #FACC15; /* Tech Yellow */
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #C19A6B;
-      }
-      .dark ::-webkit-scrollbar-thumb:hover {
-        background: #FFD700; /* Gold */
-      }
-      
-      /* Tech Grid Background for global reuse - Dark Mode (Yellow Grid) */
+      body { transition: background-color 0.5s ease, color 0.5s ease; }
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: rgba(0,0,0,0.1); }
+      .dark ::-webkit-scrollbar-track { background: #111; }
+      ::-webkit-scrollbar-thumb { background: #8b7355; border-radius: 4px; }
+      .dark ::-webkit-scrollbar-thumb { background: #FACC15; }
       .tech-bg {
         background-color: #000000;
         background-image: 
@@ -85,8 +58,6 @@
           linear-gradient(90deg, rgba(250, 204, 21, 0.1) 1px, transparent 1px);
         background-size: 40px 40px;
       }
-
-      /* Paper Texture for Light Mode */
       .heritage-bg {
         background-color: #F9F5EB;
         background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png");
@@ -95,16 +66,19 @@
   <script type="importmap">
 {
   "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
     "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "vite": "https://aistudiocdn.com/vite@^7.2.4",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
   }
 }
 </script>
 </head>
   <body class="heritage-bg dark:tech-bg text-heritage-brown dark:text-yellow-50">
     <div id="root"></div>
+    <script type="module" src="/src/index.tsx"></script>
   </body>
 </html>
